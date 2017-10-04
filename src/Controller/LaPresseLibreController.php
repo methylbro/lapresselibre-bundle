@@ -45,7 +45,7 @@ class LaPresseLibreController
     {
         $headers = $this->handler->getHttpResponseHeaders();
         try {
-            return new Response(
+            $response = new Response(
                 $this->handler->process($request),
                 Response::HTTP_OK,
                 $headers
